@@ -24,6 +24,7 @@
     <div class="card-footer">
         {% for comment in article.comment_set.all %}
             <p>{{comment.user}} : {{comment.content}}</p>
+        {% endfor %}
     </div>
 
 </div>
