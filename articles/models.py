@@ -1,4 +1,6 @@
 from django.db import models
+from accounts.models import User
+from django.conf import settings
 from django.contrib.auth import get_user_model
 # Create your models here.
 
@@ -26,3 +28,4 @@ class Comment(models.Model):
     
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     # user_id 
+
