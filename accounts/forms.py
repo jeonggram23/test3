@@ -11,7 +11,5 @@ class CustomerUserCreationForm(UserCreationForm):
         
         
 class CustomAuthenticationForm(AuthenticationForm):
-    
-    class Meta:
-        
-        pass
+
+    pass
