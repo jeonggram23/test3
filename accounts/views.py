@@ -24,10 +24,13 @@ def signup(request):
     context = {
         'form': form,
     }
-    return render(request, 'signup.html', context)
+    return render(request, 'accounts_form.html', context)
 
 
 def login(request):
+    if request.user.is_authenticated:
+        return redirect('articles:index')
+    
     if request.method == 'POST':
         form = CustomAuthenticationForm(request, request.POST)
         if form.is_valid():
@@ -44,7 +47,7 @@ def login(request):
         'form': form,
     }
     
-    return render(request, 'login.html', context)
+    return render(request, 'accounts_form.html', context)
 
 
 def logout(request):

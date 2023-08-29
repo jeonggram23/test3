@@ -19,5 +19,6 @@ def index(request):
     return render(request, 'index.html', context)
 
 def create(request):
-    
+    pass
 def comment_create(request):
+    pass
